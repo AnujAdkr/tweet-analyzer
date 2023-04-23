@@ -5,15 +5,12 @@ public class TweetMessage {
     String hashTag;
     long created;
     String tweetText;
-    //ToDo - Checking Object to JsonB mapping
-    private String status;
 
-    public TweetMessage(long tweetId, String hashTag, long created, String tweetText, String status) {
+    public TweetMessage(long tweetId, String hashTag, long created, String tweetText) {
         this.tweetId = tweetId;
         this.hashTag = hashTag;
         this.created = created;
         this.tweetText = tweetText;
-        this.status = status;
     }
 
     public long getTweetId() {
@@ -48,14 +45,6 @@ public class TweetMessage {
         this.tweetText = tweetText;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
         return "TweetMessage{" +
@@ -63,7 +52,6 @@ public class TweetMessage {
                 ", hashTag='" + hashTag + '\'' +
                 ", created=" + created +
                 ", tweetText='" + tweetText + '\'' +
-                ", status='" + status + '\'' +
                 '}';
     }
 }

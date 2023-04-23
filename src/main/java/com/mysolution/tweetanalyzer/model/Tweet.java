@@ -3,7 +3,7 @@ package com.mysolution.tweetanalyzer.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tweet_details")
+@Table(name = "tweet_data")
 public class Tweet {
     @Id
     @Column(name = "id")
@@ -21,9 +21,6 @@ public class Tweet {
     @Column(name = "tweet_text")
     String tweetText;
 
-    //ToDo - Checking Object to JsonB mapping
-    @Column(name = "status_data", columnDefinition = "jsonb")
-    private String status;
 
     public Tweet(String id , long tweetId, String hashTag, long created, String tweetText) {
         this.id = id;
